@@ -215,16 +215,6 @@ fg_api.prototype.adsModule = function() {
 
 				M.dfp_ad_unit_code =
 					"/37336410/InGameInterstitial//" + self.config.aid + "//d0";
-
-				faZepto.getScript(
-					"js/null.js?patch/google/ima3.js?imasdk.googleapis.com/js/sdkloader/ima3.js",
-					// https://imasdk.googleapis.com/js/sdkloader/ima3_debug.js
-					sdkLoadedCallback,
-					function() {
-						self.log("failed to load ima sdk");
-						sdkLoadedCallback();
-					}
-				);
 				break;
 			case "none":
 				self.config.ads.off = true;
@@ -9044,24 +9034,6 @@ fg_api.prototype.init = function () {
 		}
 
 		self.game.init();
-
-		if (detection.is.pc && window.console) {
-			// eslint-disable-next-line no-console
-			console.log(
-				"%c ||| Brought to you |||",
-				"background-color: #0092c3; background-image: -webkit-linear-gradient(top, #0092c3, #eee); background-image: linear-gradient(to bottom, #0092c3, #eee); padding: 5px 10px; color: #333"
-			);
-			// eslint-disable-next-line no-console
-			console.log(
-				"%c |||   by Famobi    |||",
-				"background-color: #f08119; background-image: -webkit-linear-gradient(top, #f08119, #eee); background-image: linear-gradient(to bottom, #f08119, #eee); padding: 5px 10px; color: #111"
-			);
-			// eslint-disable-next-line no-console
-			console.log(
-				"%c ||| HTML5Games.com |||",
-				"background-color: #333; background-image: -webkit-linear-gradient(top, #333, #eee); background-image: linear-gradient(to bottom, #333, #eee); padding: 5px 10px; color: #fff"
-			);
-		}
 	}
 
 	// Favicon
