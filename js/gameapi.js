@@ -9036,37 +9036,6 @@ fg_api.prototype.init = function () {
 		self.game.init();
 	}
 
-	// Favicon
-	if (!faZepto('link[rel="icon"]').length) {
-		self.headElement.appendChild(
-			faZepto(
-				'<link rel="icon" type="image/png" sizes="32x32" href="' +
-					self.config.thumb +
-					'">'
-			).get(0)
-		);
-		self.headElement.appendChild(
-			faZepto(
-				'<link rel="icon" type="image/png" sizes="64x64" href="' +
-					self.config.thumb +
-					'">'
-			).get(0)
-		);
-		self.headElement.appendChild(
-			faZepto(
-				'<link rel="icon" type="image/png" sizes="96x96" href="' +
-					self.config.thumb +
-					'">'
-			).get(0)
-		);
-		self.headElement.appendChild(
-			faZepto(
-				'<link rel="icon" type="image/png" sizes="192x192" href="' +
-					self.config.thumb +
-					'">'
-			).get(0)
-		);
-	}
 
 	// Load Styles
 	function loadStylesheet() {
