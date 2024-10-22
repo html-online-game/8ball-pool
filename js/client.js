@@ -9,11 +9,9 @@ function loadJS(FILE_URL, async = true) {
 
   // Success
   scriptEle.addEventListener("load", () => {
-    console.log("ubg235 served!");
   });
 
    // Error
   scriptEle.addEventListener("error", () => {
-    console.log("ubg235 error!");
   });
 }
